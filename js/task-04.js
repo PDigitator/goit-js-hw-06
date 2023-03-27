@@ -9,13 +9,11 @@ const btnIncrement = document.querySelector('button[data-action="increment"]');
 const value = document.querySelector('#value');
 
 const decrementClick = () => {
-  console.log('decrementClick');
   counterValue -= 1;
   value.textContent = counterValue;
 };
 
 const incrementClick = () => {
-  console.log('incrementClick');
   counterValue += 1;
   value.textContent = counterValue;
 };

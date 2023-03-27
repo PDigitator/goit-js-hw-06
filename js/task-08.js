@@ -17,14 +17,13 @@ function handleLogin(event) {
 
   if (email.value === '' || password.value === '') {
     alert('Please fill in all the fields!');
+  } else {
+    const formObject = {
+      Email: `${email.value}`,
+      Password: `${password.value}`,
+    };
+
+    console.log(formObject);
+    event.currentTarget.reset();
   }
-
-  const formObject = {
-    Email: `${email.value}`,
-    Password: `${password.value}`,
-  };
-
-  console.log(formObject);
-
-  event.currentTarget.reset();
 }

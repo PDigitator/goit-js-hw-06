@@ -14,6 +14,7 @@ const colorValue = document.querySelector('.color');
 colorChange.addEventListener('click', handleClick);
 
 function handleClick() {
-  colorValue.textContent = getRandomHexColor();
-  body.style.backgroundColor = getRandomHexColor();
+  const color = getRandomHexColor();
+  colorValue.textContent = color;
+  body.style.backgroundColor = color;
 }
