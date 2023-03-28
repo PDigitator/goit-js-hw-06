@@ -17,17 +17,22 @@ const btnDestroy = document.querySelector('button[data-destroy]');
 const container = document.querySelector('#boxes');
 
 function createBoxes(amount) {
+  const elements = [];
   let size = 30;
+
   for (let i = 0; i < amount; i += 1) {
+    const color = getRandomHexColor();
     const element = document.createElement('div');
+
     element.style.width = `${size}px`;
     element.style.height = `${size}px`;
-    element.style.backgroundColor = getRandomHexColor();
+    element.style.backgroundColor = color;
+
+    elements.push(element);
 
     size += 10;
-
-    container.append(element);
   }
+  container.append(...elements);
 }
 
 const createClick = () => {
