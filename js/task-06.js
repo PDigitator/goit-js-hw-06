@@ -5,7 +5,7 @@
 
 const textInput = document.querySelector('#validation-input');
 
-const notInFocus = () => {
+const textInputBlurHandler = () => {
   if (textInput.value.length === Number(textInput.dataset.length)) {
     textInput.classList.contains('invalid')
       ? textInput.classList.replace('invalid', 'valid')
@@ -16,4 +16,4 @@ const notInFocus = () => {
       : textInput.classList.add('invalid');
   }
 };
-textInput.addEventListener('blur', notInFocus);
+textInput.addEventListener('blur', textInputBlurHandler);

@@ -35,14 +35,14 @@ function createBoxes(amount) {
   container.append(...elements);
 }
 
-const createClick = () => {
+const onBtnCreateClick = () => {
   createBoxes(input.value);
 };
 
-btnCreate.addEventListener('click', createClick);
+btnCreate.addEventListener('click', onBtnCreateClick);
 
-const destroyClick = () => {
+const onBtnDestroyClick = () => {
   container.innerHTML = '';
 };
 
-btnDestroy.addEventListener('click', destroyClick);
+btnDestroy.addEventListener('click', onBtnDestroyClick);

@@ -8,12 +8,12 @@ function getRandomHexColor() {
 }
 
 const body = document.querySelector('body');
-const colorChange = document.querySelector('.change-color');
+const btnColorChange = document.querySelector('.change-color');
 const colorValue = document.querySelector('.color');
 
-colorChange.addEventListener('click', handleClick);
+btnColorChange.addEventListener('click', handleBtnColorChangeClick);
 
-function handleClick() {
+function handleBtnColorChangeClick() {
   const color = getRandomHexColor();
   colorValue.textContent = color;
   body.style.backgroundColor = color;

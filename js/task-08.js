@@ -7,9 +7,9 @@
 
 const form = document.querySelector('.login-form');
 
-form.addEventListener('submit', handleLogin);
+form.addEventListener('submit', handleFormSubmit);
 
-function handleLogin(event) {
+function handleFormSubmit(event) {
   event.preventDefault();
   const {
     elements: { email, password },
