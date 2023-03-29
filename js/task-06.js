@@ -5,8 +5,8 @@
 
 const textInput = document.querySelector('#validation-input');
 
-const textInputBlurHandler = () => {
-  if (textInput.value.length === Number(textInput.dataset.length)) {
+const textInputBlurHandler = event => {
+  if (event.currentTarget.value.length === Number(textInput.dataset.length)) {
     textInput.classList.contains('invalid')
       ? textInput.classList.replace('invalid', 'valid')
       : textInput.classList.add('valid');
@@ -17,3 +17,5 @@ const textInputBlurHandler = () => {
   }
 };
 textInput.addEventListener('blur', textInputBlurHandler);
+
+//! if (textInput.value.length === Number(textInput.dataset.length)) також працює
