@@ -7,13 +7,17 @@ const textInput = document.querySelector('#validation-input');
 
 const textInputBlurHandler = event => {
   if (event.currentTarget.value.length === Number(textInput.dataset.length)) {
-    textInput.classList.contains('invalid')
-      ? textInput.classList.replace('invalid', 'valid')
-      : textInput.classList.add('valid');
+    if (textInput.classList.contains('invalid')) {
+      textInput.classList.replace('invalid', 'valid');
+    } else {
+      textInput.classList.add('valid');
+    }
   } else {
-    textInput.classList.contains('valid')
-      ? textInput.classList.replace('valid', 'invalid')
-      : textInput.classList.add('invalid');
+    if (textInput.classList.contains('valid')) {
+      textInput.classList.replace('valid', 'invalid');
+    } else {
+      textInput.classList.add('invalid');
+    }
   }
 };
 textInput.addEventListener('blur', textInputBlurHandler);
